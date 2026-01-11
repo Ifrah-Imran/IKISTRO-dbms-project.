@@ -7,8 +7,8 @@ import java.sql.SQLException;
 public class OracleDB {
     // Update these credentials as needed
 private static final String URL = "jdbc:oracle:thin:@localhost:1521/orclpdb";
-    private static final String DB_USER = "system";
-    private static final String DB_PASSWORD = "Ifrah@359";
+    private static final String DB_USER = "YOUR_USERNAME";
+    private static final String DB_PASSWORD = "YOUR_PASSWORD";
 
     static {
         try {
@@ -20,7 +20,7 @@ private static final String URL = "jdbc:oracle:thin:@localhost:1521/orclpdb";
     }
 
     public static Connection getConnection() throws SQLException {
-        return DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521/orclpdb", "system", "Ifrah@359");
+        return DriverManager.getConnection(URL, DB_USER, DB_PASSWORD);
     }
 
     public static void testConnection() {
